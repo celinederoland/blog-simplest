@@ -1,0 +1,29 @@
+[
+  {
+    "title":"install php7",
+    "metadata": {
+      "category": "backend",
+      "difficulty": "middle"
+    },
+    "content":"Installing php7 is not easy because it is not on standard repository",
+    "created_at":"2016_05_30"
+  },
+  {
+    "title":"use Eloquent",
+    "metadata": {
+      "category": "database, orm",
+      "difficulty": "middle"
+    },
+    "content":"Eloquent needs Models, Migration and Seeds",
+    "created_at":"2016_05_15"
+  },
+  {
+    "title":"development environment",
+    "metadata": {
+      "category": "backend, VM",
+      "difficulty": "middle"
+    },
+    "content":"use VirtualBox Or docker Or distant-server",
+    "created_at":"2016_05_07"
+  }
+]
