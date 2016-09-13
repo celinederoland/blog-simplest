@@ -35,9 +35,8 @@ class Article extends Page
     protected function content()
     {
 
-        $cards = $this->get_cards();
-        $card = $cards[$this->name];
-        unset($cards);
+
+        $card = $this->card();
 
         $str = "
             <section class=\"container-fluid content\">
@@ -64,6 +63,18 @@ class Article extends Page
             </section>";
 
         return $str;
+    }
+
+    private function card()
+    {
+
+        $cards = $this->get_cards();
+        foreach ($cards as $card) {
+            if ($card['name'] == $this->name) {
+                return $card;
+            }
+        }
+        return null;
     }
 
 }
