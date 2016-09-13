@@ -14,7 +14,7 @@ body {
 header {
     position: fixed;
     z-index: 1030;
-    margin-top: 0px !important;
+    margin-top: 0 !important;
     padding-top: 20px !important;
     padding-left: 15px !important;
     background-color: white;
@@ -28,24 +28,19 @@ header {
 }
 
 .thumbnail {
-    border:0px none white !important;
+    border: 0 none white !important;
     box-shadow:none;
-   /* background-image: url(background.png);*/
 }
 
-header h1, .additional h1 {
+h1, h1 a {
     color: #6700FF;
     border-bottom: none;
 }
+
 .additional h1 {
     color: #EE00FF;
     border-bottom: none;
     margin-bottom: 50px;
-}
-
-h1 {
-    color: #8a8a8a;
-    /*border-bottom: 1px solid #FF0700;*/
 }
 
 hr {
@@ -63,10 +58,9 @@ strong {
 .additional {
     position: fixed;
     z-index: 1050;
-    right: 0px;
+    right: 0;
     width: 300px; /* TODO adapt with device and JS hide */
-    /*border: solid 1px #6700FF;*/
-    background-color: white;
+    background-color: #EE00FF;
     background-image: url(background.png);
     min-height: 500px;
     max-height: 500px;

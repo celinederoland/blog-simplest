@@ -12,7 +12,6 @@
 .Trash-*
 
 # User-specific stuff:
-.idea/*
 
 ## File-based project format:
 *.iws
@@ -34,3 +33,4 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
+.idea/

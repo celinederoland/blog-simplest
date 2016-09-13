@@ -1,0 +1,14 @@
+[
+  {
+    "name": "my-beautiful-name",
+    "title": "My beautiful title",
+    "sub-title": "my beautiful subtitle",
+    "message": "My beautiful message"
+  },
+  {
+    "name": "my-second-name",
+    "title": "My second title",
+    "sub-title": "my second subtitle",
+    "message": "My second message"
+  }
+]
