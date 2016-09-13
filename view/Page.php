@@ -40,11 +40,11 @@ abstract class Page
             
             
                 <header class=\"page-header\">
-                    <h1><span class=\"glyphicon glyphicon-leaf\" aria-hidden=\"true\"></span> &nbsp; Céline de Roland  </h1>
+                    <h1><a href='home'><span class=\"glyphicon glyphicon-leaf\" aria-hidden=\"true\"></span> &nbsp; Céline de Roland  </a></h1>
                 </header>
             
                 <section class=\"additional\">
-                    <h1>Today &nbsp; <span class=\"glyphicon glyphicon-pushpin\"></span></h1>
+                    <h1><span class=\"hidden-small\">Today &nbsp; </span><span class=\"glyphicon glyphicon-pushpin\"></span></h1>
                     <p>Here I can say some things</p>
                 </section>";
     }

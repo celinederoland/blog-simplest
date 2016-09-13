@@ -1,16 +1,12 @@
-/* TODO
-@media(min-width: @screen-md-min) {
+@media (min-width: 992px) {
 
     .fixed-col {
         min-height: 500px;
         max-height: 500px;
         overflow-y: hidden;
     }
-}*/
-
-body {
-
 }
+
 header {
     position: fixed;
     z-index: 1030;
@@ -22,19 +18,19 @@ header {
     width: 100%;
 }
 
-.content {
-    padding-top:130px;
-    padding-right: 300px; /* TODO adapt with device and JS hide */
-}
 
 .thumbnail {
     border: 0 none white !important;
     box-shadow:none;
 }
 
-h1, h1 a {
+h1, a {
     color: #6700FF;
     border-bottom: none;
+}
+
+a:hover {
+    color: #6700FF;
 }
 
 .additional h1 {
@@ -55,17 +51,69 @@ strong {
     color: #2c2c2c;
 }
 
-.additional {
-    position: fixed;
-    z-index: 1050;
-    right: 0;
-    width: 300px; /* TODO adapt with device and JS hide */
-    background-color: #EE00FF;
-    background-image: url(background.png);
-    min-height: 500px;
-    max-height: 500px;
-    padding-left: 50px;
-    padding-bottom: 50px;
-    padding-top: 20px;
-    font-size: 1.3em;
+@media (min-width: 992px) {
+
+    .content {
+        padding-top: 130px;
+        padding-right: 300px;
+    }
+
+    .additional {
+        position: fixed;
+        z-index: 1050;
+        right: 0;
+        width: 300px;
+        background-color: #EE00FF;
+        background-image: url(background.png);
+        min-height: 500px;
+        max-height: 500px;
+        padding-left: 50px;
+        padding-bottom: 50px;
+        padding-top: 20px;
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .content {
+        padding-top: 130px;
+    }
+
+    .additional {
+        position: fixed;
+        z-index: 1050;
+        right: 0;
+    }
+
+    .additional h1 {
+        padding-right: 10px;
+        text-align: right;
+    }
+
+    .hidden-small {
+        display: none;
+    }
+
+    .additional p {
+        display: none;
+    }
+
+    .additional:hover {
+        width: 50%;
+        background-color: #EE00FF;
+        background-image: url(background.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        min-height: 100%;
+        max-height: 100%;
+        padding-left: 20px;
+        padding-bottom: 10px;
+        padding-top: 20px;
+        font-size: 1.3em;
+    }
+
+    .additional:hover p {
+        display: block;
+    }
 }
