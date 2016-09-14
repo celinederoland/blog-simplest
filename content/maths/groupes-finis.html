@@ -1,0 +1,253 @@
+<h2>Groupes</h2>
+<p>
+    Un groupe \((G,*)\) est un ensemble
+    muni d'une loi \(*\) associative
+    qui admet un élément neutre \(e\)
+    et pour laquelle tout élément a un symétrique.<br/>
+    Si de plus la loi est commutative, on dit que
+    le groupe est abélien. <br/>
+    Un sous groupe de \(G\) est un sous ensemble de \(G\) qui
+    est lui même un groupe pour la loi \(*\).
+    On note \(H \leq G\) <br/>
+    On appelle ordre d'un élément \(x\) de \(G\)
+    le nombre \(n\) tel que \(x^n = e\) <br/>
+    Si \(n\) n'existe pas, l'élément est d'ordre \(\infty\)<br/>
+    Le cardinal de \(\frac{G}{H}\) se note \([G:H]\)
+    et s'appelle indice de \(H\) dans \(G\)<br/>
+    Le groupe est monogène si il est engendré par un seul élément. <br/>
+    Si en plus il est fini on dit qu'il est cyclique.<br/>
+    Indicateur d'Euler : on note \(\phi(n)\) le nombre de générateurs
+    d'un groupe cyclique.
+</p>
+<h3>Théorème de Lagrange</h3>
+<p>
+    L'ordre d'un sous groupe d'un groupe fini divise l'ordre du groupe
+</p>
+<h4>Preuve</h4>
+Soit \(H \leq G, x \in G\).
+<h5>
+    Montrons que \(x\mathcal{R}y \Leftrightarrow y \in xH\)
+    est une relation d'équivalence
+</h5>
+<p>
+    La relation est réflexive. \(x\mathcal{R}x\) car \(e\in H\) <br/>
+    La relation est symétrique. Si \(x\mathcal{R}y\)
+    alors \(\exists h\in H\) tel que \(x=yh\),
+    \(H\) est un groupe donc \(h^{-1}\in H\) et \(y=xh^{-1}\)<br/>
+    La relation est transitive.
+    \(x=yh=zhh'\) avec \(hh'\in H\) (associativité + loi interne)
+</p>
+<h5>
+    Montrons que les classes d'équivalence sont toutes en bijection avec \(H\)
+</h5>
+<p>
+    La relation est transitive, donc toute classe est de la forme \(xH\). <br/>
+    En effet, prenant \(x\) quelconque dans une classe,
+    \(\forall y \in [x]\) on a \(y \in xH\). <br/>
+    Soit \(f: y\in xH \longrightarrow h \in H \) tel que \(y = xh\) <br/>
+    \(f\) est surjective car \(\forall h \in H, xh \in xH\) <br/>
+    \(f\) est injective car
+    \(xh = xh' \Rightarrow x^{-1}xh = x^{-1}xh' \Rightarrow h=h'\)
+</p>
+<h5>
+    Montrons que \(|H|\) divise \(|G|\)
+</h5>
+<p>
+    L'ensemble des classes d'équivalence forme une partition du groupe.<br/>
+    De plus, les classes d'équivalence ont toutes le même cardinal,
+    celui de \(H\).<br/>
+    Donc \(|G|=|H|[G:H]\). <br/>
+</p>
+<h3>Proposition</h3>
+<p>
+    \(\displaystyle{\sum_{d|n}}\phi(d) = n\)
+</p>
+<h4>Preuve</h4>
+<p>
+    On range les éléments de \(G\) suivant leur ordre.
+    Ca forme une partition de \(G\)
+    <br/>
+    Pour chaque diviseur \(d\) de \(n\), les éléments d'ordre \(d\)
+    sont les générateurs du groupe cyclique d'ordre \(d\).
+    Il y en a donc exactement \(\phi(d)\). <br/>
+    Comme ils formaient une partition, on a bien
+    \(\displaystyle{\sum_{d|n}}\phi(d) = n\)
+</p>
+<h3>Proposition</h3>
+<p>
+    Un groupe fini de cardinal \(n\) est cyclique
+    si et seulement si pour tout \(d\) diviseur de \(n\)
+    il existe un seul sous groupe d'ordre \(d\)
+</p>
+<h4>Preuve</h4>
+<h5>
+    cyclique
+    \(\Rightarrow\) pour tout \(d\) diviseur de \(n\)
+    il existe un seul sous groupe d'ordre \(d\)
+</h5>
+<p>
+    Il est clair que \(&lt;x^{\frac{n}{d}}&gt;\) est d'ordre \(d\)<br/>
+    Si \(&lt;x^k&gt;\) est d'ordre \(d\), alors \(x^{kd} = e\)
+    donc \(kd = np\) donc \(k = \frac{n}{d}p\)
+    donc \(x^k \in &lt;x^{\frac{n}{d}}&gt;\) donc
+    \(&lt;x^k&gt; \subset &lt;x^{\frac{n}{d}}&gt;\),
+    et comme ils ont même ordre, \(&lt;x^k&gt; = &lt;x^{\frac{n}{d}}&gt;\)
+</p>
+<h5>
+    Pour tout \(d\) diviseur de \(n\)
+    il existe un seul sous groupe d'ordre \(d\)
+    \(\Rightarrow\) cyclique
+</h5>
+<p>
+    Notons \(\psi(d)\) le nombre d'éléments d'ordre \(d\)
+    (peut être éventuellement égal à 0). <br/>
+    Si \(\psi(d) \neq 0\), alors \(\exists x \in G\)
+    tel que \(&lt;x&gt;\) est le seul sous groupe d'ordre \(d\). <br/>
+    Il est cyclique, donc \(\psi(d)=\phi(d)\). <br/>
+    En classant les éléments de \(G\) suivant leur ordre,
+    on a toujours \(n = \displaystyle{\sum_{d|n}} \psi(d)
+    = \displaystyle{\sum_{d|n}} \phi(d)\). <br/>
+    Par conséquent, aucun \(\psi(d)\) ne peut être nul, et en
+    particulier il y a au moins un élément d'ordre \(n\) <br/>
+    donc \(G\) est cyclique.
+</p>
+<h3>Lemme</h3>
+<p>
+    Un groupe monogène infini a une infinité de sous groupes
+</p>
+<h4>Preuve</h4>
+<p>
+    Si \(x^i = x^j\) alors \(x^{i-j}=e\) et
+    donc \(&lt;x&gt;\) est fini. <br/>
+    Toutes les puissances de \(x\) sont distinctes, donc
+    tout élément non neutre engendre lui même
+    un sous groupe monogène infini.
+</p>
+<h3>Proposition</h3>
+<p>
+    Un groupe est fini si et seulement si
+    il possède un nombre fini de sous groupes
+</p>
+<h4>Preuve</h4>
+<h5>
+    fini \(\Rightarrow\)
+    nombre fini de sous groupes
+</h5>
+<p>
+    les sous groupes sont des sous ensembles, donc c'est trivial.
+</p>
+<h5>
+    nombre fini de sous groupes \(\Rightarrow\)
+    fini
+</h5>
+<p>
+    \(G\) a en particulier un nombre fini de sous groupes monogènes
+    de la forme \(&lt;x&gt;\). <br/>
+    Ces groupes forment une partition de \(G\), donc
+    si \(G\) est infini, alors il y en aurait au moins un infini. <br/>
+    Contradiction, car un groupe monogène infini
+    a une infinité de sous groupes.
+</p>
+
+
+<h2>Groupes jusqu'à 7 éléments</h2>
+<h3>Proposition</h3>
+<p>
+    Les groupes à 2, 3, 5 et 7 éléments sont cycliques (nombres premiers)
+</p>
+<h3>Proposition</h3>
+<p>
+    Il existe deux groupes à 4 éléments.
+</p>
+<h4>Preuve</h4>
+<h5>Un groupe cyclique</h5>
+<p>
+    C'est le groupe \(\{1,x,x^2,x^3\}\),
+    isomorphe par exemple à \(\mathbb{Z}/4\),
+    ou encore aux racines quatrièmes de l'unité dans \(\mathbb{C}\)
+</p>
+<h5>groupe de Klein, ou groupe du rectangle</h5>
+<p>
+    N'ayant aucun élément d'ordre 4, tous les éléments sont d'ordre 2.
+    On en construit facilement la table et on constate qu'il est
+    commutatif.<br/>
+    Ce groupe se note \(\mathcal{V}\) (Vierergruppe)
+</p>
+<table class="table table-bordered" style="width: 30%">
+    <tr>
+        <th></th>
+        <th>1</th>
+        <th>x</th>
+        <th>y</th>
+        <th>z</th>
+    </tr>
+    <tr>
+        <th>1</th>
+        <td>1</td>
+        <td>x</td>
+        <td>y</td>
+        <td>z</td>
+    </tr>
+    <tr>
+        <th>x</th>
+        <td>x</td>
+        <td>1</td>
+        <td>z</td>
+        <td>y</td>
+    </tr>
+    <tr>
+        <th>y</th>
+        <td>y</td>
+        <td>z</td>
+        <td>1</td>
+        <td>x</td>
+    </tr>
+    <tr>
+        <th>z</th>
+        <td>z</td>
+        <td>y</td>
+        <td>x</td>
+        <td>1</td>
+    </tr>
+</table>
+<p>
+    Il est isomorphe :
+<ul>
+    <li>à \(\mathbb{Z}/2 \times \mathbb{Z}/2\)</li>
+    <li>au groupe diédral \(D_4\)</li>
+    <li>au groupe des isométries du plan qui
+        conservent un rectangle ou un losange.
+        il est alors constitué de l'identité,
+        les deux symétries axiales, et la rotation de \(180°\)
+    </li>
+    <li>au groupe des automorphismes du graphe :<br/>
+        <img src="content/maths/groupes-finis-illustration-1.png"
+             alt="graphe à 5 sommets d'arêtes : (1,2),(3,4),(4,5)"/>
+        Il y a l'identité,
+        \(x\) la permutation des sommets 1 et 2,
+        \(y\) la permutation des sommets 5 et 3
+        et \(z=xy\)
+    </li>
+</ul>
+</p>
+
+<h2>Exercices</h2>
+<h3></h3>
+<p>
+    Tout sous groupe multiplicatif fini d'un corps commutatif est cyclique
+</p>
+<h4>Preuve</h4>
+<p>
+    Soit \(G\) un tel sous groupe, \(d\) diviseur de \(n=|G|\)
+    tel qu'il existe un élément \(x\) d'ordre \(d\)<br/>
+    \(x\) est solution de l'équation \(x^d = 1\). <br/>
+    Dans un corps commutatif, cette équation a
+    au plus \(d\) solutions.<br/>
+    Les \(d\) éléments de \(&lt;x&gt;\) sont de la forme \(x^k\),
+    et on a \(x^{kd} = 1\),
+    donc on a trouvé \(d\) solutions.<br/>
+    Il n'y a donc pas d'autre élément d'ordre \(d\) dans \(G\). <br/>
+    On note \(\psi(d)\) le nombre d'éléments d'ordre \(d\) et
+    on montre que \(\psi(d)=\phi(d)\) et en particulier
+    \(\psi(n) \neq 0\).
+</p>

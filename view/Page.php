@@ -45,8 +45,29 @@ abstract class Page
             
                 <section class=\"additional\">
                     <h1><span class=\"hidden-small\">Today &nbsp; </span><span class=\"glyphicon glyphicon-pushpin\"></span></h1>
-                    <p>Here I can say some things</p>
+                    <div>" . $this->tipoftheday() . "</div>
                 </section>";
+    }
+
+    private function tipoftheday()
+    {
+        $todays = $this->get_todaytips();
+        $index = array_rand($todays);
+        $name = $todays[$index];
+        return file_get_contents($this->todaytip_filename($name));
+    }
+
+    /**
+     * @return mixed
+     */
+    protected function get_todaytips()
+    {
+        return json_decode(file_get_contents("content/today/today.json"), true);
+    }
+
+    protected function todaytip_filename($name)
+    {
+        return "content/today/" . $name . ".html";
     }
 
     protected abstract function content();
@@ -66,6 +87,4 @@ abstract class Page
     {
         return json_decode(file_get_contents("content/" . $_SERVER['category'] . "/cards.json"), true);
     }
-
-
 }

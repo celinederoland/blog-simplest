@@ -1,0 +1,57 @@
+<h2>
+    Divisibilité
+</h2>
+<h3>Division euclidienne</h3>
+<p>
+    Soient \(a \in \mathbb{Z}, b \in \mathbb{N}^*\).
+    Alors il existe un unique couple \( (q,r) \in \mathbb{Z} \times \mathbb{N}\) tel que
+    $$a=bq+r, 0 \leq r \leq b-1$$
+</p>
+<h4>Preuve</h4>
+<h5>unicité</h5>
+<p>
+    Si \(a=bq+r=bq'+r'\), alors \(|b||q-q'|=|r'-r|\) <br/>
+    Or \(r\) et \(r'\) sont dans \([0;b-1]\) donc \(|r'-r| < b\) <br/>
+    \(|b||q-q'| < b\) donc \(|q-q'| = 0\) donc \(q = q'\) et \(b=b'\)
+</p>
+<h5>existence</h5>
+<p>
+    Posons \(R = \{ a-bp, p \in \mathbb{Z}\}\) C'est une partie non vide de \(\mathbb{Z}\),
+    dont l'intersection avec \(\mathbb{N}\) est non vide. <br/>
+    On pose \(r = \mathrm{min} (R\cap\mathbb{N})\) et
+    \(q\) la valeur de \(p\) permettant d'atteindre ce minimum. <br/>
+    Si \(r\geq b\), on aurait : <br/>
+    \( a - bq = r \) <br/>
+    \( a - b(q+1) = r - b \geq 0\) donc on aurait trouvé un élément plus petit dans \(R\cap\mathbb{N}\)<br/>
+    contradiction, donc \(0 \leq r \leq b-1\)
+</p>
+
+<h3>
+    Théorème de Bezout
+</h3>
+<p>
+    \(a \wedge b = 1\) si et seulement si il existe un couple \((u,v)\in \mathbb{Z}^2\) tels que \(au+bv=1\)
+</p>
+<h4>Preuve</h4>
+<h5>
+    \(a \wedge b = 1 \Rightarrow\) il existe un couple \((u,v)\in \mathbb{Z}^2\) tels que \(au+bv=1\)
+</h5>
+<p>
+    Posons \(B=\{ma + nb, m,n\in \mathbb{Z}\}\cap \mathbb{N}^*\).
+    C'est une partie non vide de \(\mathbb{N}\)
+    donc elle possède un plus petit élément \(d\), atteint pour un certain couple \(u,v\). <br/>
+    Montrons que \(d\) divise \(a\) et \(b\) : <br/>
+    \(a=dq+r = dau + dbv + r\) donc \(r = a(1-du) + b(- dv) \in \{ma + nb, m,n\in \mathbb{Z}\}\) et \( 0 \leq r < d \)
+    <br/>
+    Or \(d\) est le plus petit élément de \(B\) donc \(r \not\in \mathbb{N}^*\) <br/>
+    donc \(r = 0\) et \(d\) divise \(a\) <br/>
+    de même \(d\) divise \(b\)<br/>
+    Donc \(d\) divise \(a \wedge b = 1\) donc \(d=1\)
+</p>
+<h5>
+    il existe un couple \((u,v)\in \mathbb{Z}^2\) tels que \(au+bv=1 \Rightarrow\) \(a \wedge b = 1 \)
+</h5>
+<p>
+    \(a \wedge b\) divise \(a\) et \(b\) donc il divise \(au+bv\)
+    donc il divise \(1\) donc il est égal à \(1\)
+</p>
