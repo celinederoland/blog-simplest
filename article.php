@@ -6,16 +6,23 @@
  * Time: 12:06
  */
 
-require_once "view/Article.php";
-require_once "view/Home.php";
+try {
 
-$page = new Article($_GET['page']);
+    if (!isset($_GET['page']) || empty($_GET['page'])) {
+        throw new Exception("missing_parameter");
+    }
 
-if (!isset($_GET['page']) || empty($_GET['page'])) {
-    $page = new Home();
+    require_once "view/Article.php";
+    $page = new Article($_GET['page']);
+} catch (Exception $e) {
+
+    require_once "view/Home.php";
+    if($e->getMessage() == "file_not_found") {
+        $page = new Home("l'article " . $_GET['page'] . " n'existe pas");
+    } else {
+        $page = new Home();
+    }
+} finally {
+
+    echo $page->render();
 }
-if (!($page->exists())) {
-    $page = new Home("l'article " . $_GET['page'] . " n'existe pas");
-}
-
-echo $page->render();

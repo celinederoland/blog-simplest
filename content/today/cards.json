@@ -1,0 +1,29 @@
+[
+  {
+    "name": "css-number-titles",
+    "category": "css",
+    "link": {
+      "title": "Numéroter les titres d'une page html ?",
+      "href": "http://blog.demotera.com/published/2010-09-27-Numerotation-en-css.html"
+    },
+    "type": "tip"
+  },
+  {
+    "name": "frucht",
+    "category": "maths",
+    "link": {
+      "title": "Théorème de Frucht",
+      "href": "https://en.wikipedia.org/wiki/Frucht%27s_theorem"
+    },
+    "type": "tip"
+  },
+  {
+    "name": "custom-language-pstorm",
+    "category": "",
+    "link": {
+      "title": "Définir son propre langage dans PhpStorm ?",
+      "href": "http://www.jetbrains.org/intellij/sdk/docs/tutorials/custom_language_support_tutorial.html"
+    },
+    "type": "tip"
+  }
+]

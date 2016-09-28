@@ -3,12 +3,14 @@
     "name": "my-beautiful-name",
     "title": "My beautiful title",
     "sub-title": "my beautiful subtitle",
-    "message": "My beautiful message"
+    "message": "My beautiful message",
+    "type": "article"
   },
   {
     "name": "my-second-name",
     "title": "My second title",
     "sub-title": "my second subtitle",
-    "message": "My second message"
+    "message": "My second message",
+    "type": "article"
   }
 ]
